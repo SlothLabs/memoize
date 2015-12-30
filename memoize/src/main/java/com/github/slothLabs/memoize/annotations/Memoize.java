@@ -19,5 +19,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface Memoize {
+    /**
+     * The caching strategy to utilize. Defaults to {@link NullStrategy}.
+     *
+     * @return the caching strategy to utilize.
+     */
     Class<? extends MemoizationStrategy> strategy() default NullStrategy.class;
 }
