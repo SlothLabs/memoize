@@ -1,11 +1,12 @@
-package com.github.slothLabs.memoize;
+package com.github.slothLabs.memoize.guice;
 
+import com.github.slothLabs.memoize.MemoizeInterceptor;
 import com.github.slothLabs.memoize.annotations.Memoize;
 import com.google.inject.AbstractModule;
 import com.google.inject.matcher.Matchers;
 
 /**
- * Created by mcory on 12/29/15.
+ * Module for guice-based installation.
  */
 public final class MemoizeModule extends AbstractModule {
     @Override

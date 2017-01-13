@@ -104,5 +104,6 @@
 
     <modules>
         <module>memoize</module>
+        <module>memoize-guice</module>
     </modules>
 </project>

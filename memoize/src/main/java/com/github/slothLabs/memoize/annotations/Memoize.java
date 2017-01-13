@@ -1,7 +1,7 @@
 package com.github.slothLabs.memoize.annotations;
 
 import com.github.slothLabs.memoize.strategy.MemoizationStrategy;
-import com.github.slothLabs.memoize.strategy.NullStrategy;
+import com.github.slothLabs.memoize.strategy.DefaultStrategy;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -20,9 +20,9 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 public @interface Memoize {
     /**
-     * The caching strategy to utilize. Defaults to {@link NullStrategy}.
+     * The caching strategy to utilize. Defaults to {@link DefaultStrategy}.
      *
      * @return the caching strategy to utilize.
      */
-    Class<? extends MemoizationStrategy> strategy() default NullStrategy.class;
+    Class<? extends MemoizationStrategy> strategy() default DefaultStrategy.class;
 }
